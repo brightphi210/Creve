@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --white-color:white;
+
+    --black-color:#070417;
+
+    --gre-color:#B3BAC3;
+
+
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}   
+
+
+.light{
+    --white-color:white;
+    --black-color:#070417;
+
+    --gre-color:#f6f6f6;
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.dark{
+    --black-color:white;
+    --white-color:#070417;
+
+    --gre-color:#100D1F;
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+
+/* ================== work Section ============================= */
+
+
+.workSection{
+    padding: 150px 5%;
+}
+
+.workSectionDiv{
+    display: grid;
+    grid-template-columns: 2fr 4fr 150px;
+    align-items: center;
+    gap: 50px;
+    margin: auto;
+}
+
+.myForm{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.myForm input{
+    padding: 12px;
+    margin: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.myForm button{
+    padding: 10px;
+    margin: 0;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.workSectionDiv ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.workSectionDiv ul li{
+    /* display: inline-block; */
+    /* margin-right: 20px; */
+    font-size: 12px;
+    background-color: rgb(242, 242, 242);
+    padding: 6px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #585858;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}   
+
+.workSectionDiv ul li:hover{
+    background-color: #B3BAC3;
+    color: white;
+    transition: all ease 0.2s;
+}
+
+
+.workBtn button{
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--black-color) 50%, #7272be 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    color:var(--white-color);
+}
+
+.workBtn button:hover{
+    background-position: left bottom;
+    color: var(--white-color);
+}
+
+.workBtn .uil{
+    font-size: 16px;
+}
+
+@media only screen and (min-width:321px) and (max-width:768px){
+    .workSection{
+        padding: 150px 8%;
+    }
+
+    .workSectionDiv{
+        grid-template-columns: 1fr;
+    }
+
+    .myForm input{
+        padding: 12px;
+        margin: 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    
+    .myForm button{
+        padding: 10px;
+        margin: 0;
+        width: 20%;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .workSectionDiv ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 12px;
+    }
+
+    .workBtn button{
+        width: 30%;
+    }
+}
+
+/* ==================== Product Part ================= */
+
+.workProductDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding-top: 50px;
+}
+
+
+.workDiv{
+    position: relative;
+}
+
+.productOverlay{
+    z-index: 3;
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    color: white;
+    border-radius: 10px;
+}
+
+.workDiv img{
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.profileDiv{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.profileDiv img{
+    width: 25px;
+    height: 23px;
+    border-radius: 50%;
+}
+
+.profileDiv span{
+    position: absolute;
+    right: 0;
+    font-size: 13px;
+}
+
+.profileFlex{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.profileFlex p{
+    font-size: 13px;
+}
+
+.profileFlex button{
+    font-size: 12px;
+    padding: 2px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7272be;
+    color: white;
+    cursor: pointer;
+}
+
+.profileFlex button:hover{
+    background-color: #B3BAC3;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+@media only screen and (min-width:321px) and (max-width:768px){
+    .workProductDiv{
+        grid-template-columns: 1fr;
+    }
+
+    .workDiv img{
+        height: 250px;
+    }
+
+    .profileDiv img{
+        width: 25px;
+        height: 23px;
+        border-radius: 50%;
+    }
+
+    
+}
+

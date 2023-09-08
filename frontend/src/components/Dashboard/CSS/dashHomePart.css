@@ -1,0 +1,237 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+
+
+/* ====================== dashHomePart ========================== */
+
+.loginMessage{
+    position: absolute;
+    top: 120px;
+    right: 100px;
+    font-size: 15px;
+    z-index: 3;
+    color:black;
+    background-color: #e2e2f7;
+    padding: 10px 20px;
+}
+
+.dashHomePart{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 50px 10%;
+    padding-top: 200px;
+}
+
+
+.dashHomePartFlex{
+    display: grid;
+    grid-template-columns: 3fr 400px;
+    grid-gap: 50px;
+    align-items:flex-start;
+}
+
+.backHome p{
+    position: absolute;
+    font-size: 15px;
+    padding-bottom: 10px;
+    top: 160px;
+    color:#0e111b;
+
+}
+
+.secttionCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.reviewsSection{
+    background-color: white;
+    color: #070417;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 30px 50px;
+    border-radius: 10px;
+    border: #e2e2f7 solid 1px;
+}
+
+.two{
+    background-color: white;
+    color: #070417;
+}
+
+.four{
+    background-color: white;  
+    color: #070417;
+}
+
+.emptyDiv{
+    margin-top: 50px;
+    justify-content: center ;
+    text-align: center;
+}
+
+.emptyImage{
+    width: 40%;
+    opacity: 50%;
+}
+
+.emptyMessage{
+    font-size: 20px;
+    color: grey;
+}
+
+
+
+@media only screen and (min-width:321px) and (max-width:768px){
+
+    .loginMessage{
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        font-size: 12px;
+        z-index: 3;
+        color:black;
+        background-color: #f6f6fd;
+        padding: 10px 20px;
+    }
+
+
+    .dashHomePart{
+        padding: 0 5%;
+        padding-top: 200px;
+    }
+
+    .reviewsSection{
+        padding: 30px;
+    }
+
+    .dashHomePartFlex{
+        grid-template-columns: 1fr;
+    }
+
+
+    .secttionCards{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .backHome p{
+        position: absolute;
+        font-size: 15px;
+        padding-bottom: 10px;
+        top: 150px;
+        color:#0e111b;
+    }
+}
+
+
+
+/* ================= Recent activity ================= */
+
+.dashRecent{
+    background-color: white;
+    color: #070417;
+    height: 55vh;
+    padding: 30px;
+    border-radius: 10px;
+    border: #e2e2f7 solid 1px;
+}
+
+
+.dashRecent h3{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.message{
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+}
+
+.message p{
+    font-size: 13px;
+    color:rgb(126, 138, 162);
+    padding: 5px 0;
+}
+
+
+.message h4{
+    font-size: 15px;
+    color:#0e111b;
+    font-weight: 500;
+}
+
+
+.dashRecent button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+}
+
+
+.dashRecent button:hover{
+    background-color: #c6c6f2;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.workDes p{
+    padding-top: 60px;
+    color: black;
+}
+
+
+
+/* ======================= product Div ================= */
+
+.dashProductDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.dashProductDiv img{
+    width: 100%;
+    height: 210px;
+    border-radius: 10px 10px 0 0;
+}
+
+.dashProducts{
+    border-radius: 10px;
+    padding: 0;
+    background-color:white;
+    border: rgb(213, 213, 214) solid 1px;
+    color: #070417;
+}
+
+.dashProducts p{
+    padding: 15px 20px;
+}
+
+@media only screen and (min-width:321px) and (max-width:768px){
+    .dashProductDiv{
+        grid-template-columns: 1fr;
+    }
+}

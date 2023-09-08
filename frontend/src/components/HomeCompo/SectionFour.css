@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+:root{
+    --white-color:white;
+
+    --black-color:#070417;
+
+    --gre-color:#B3BAC3;
+
+
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}   
+
+
+.light{
+    --white-color:white;
+    --black-color:#070417;
+
+    --gre-color:#f6f6f6;
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.dark{
+    --black-color:white;
+    --white-color:#070417;
+
+    --gre-color:#100D1F;
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+/* ======================== Section Four ========================= */
+
+.SectionFour{
+    padding: 70px 10%;
+    background-color: var(--gre-color);
+}
+
+.SectionFour h2{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.SectionFour p{
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+
+.SectionFour i{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.SectionFour i:hover{
+    color:#6c2eb8;
+}
+
+.sectionFourDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.SectionFour-left{
+    border: rgb(199, 199, 199) solid 1px;
+    padding: 50px 30px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    color:var(--black-color);
+    background-color: var(--white-color);
+}
+
+
+.SectionFour-left:hover{
+    background-color: var(--black-color);
+    transition: all ease 0.5s;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+
+.SectionFour-left h3{
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.ratingDiv{
+    display: flex;
+    gap: 30px;
+}
+
+
+
+@media only screen and (min-width:321px) and (max-width:768px){
+
+    .SectionFour{
+        padding: 70px 7%;
+    }
+    .sectionFourDiv{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
