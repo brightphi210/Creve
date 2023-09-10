@@ -40,3 +40,41 @@
 
     --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+
+.creativePart{
+    padding: 150px 10%;
+}
+
+.creativeProfileDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.creativeEach{
+    background-color:white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.creativeEach img{
+    width: 50%;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.creativeEach h2{
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.creativeEach p{
+    font-size: 13px;
+    color: grey;
+    padding-top: 10px;
+}
