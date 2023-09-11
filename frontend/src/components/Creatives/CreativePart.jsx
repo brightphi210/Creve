@@ -49,7 +49,7 @@ const CreativePart = () => {
           {creatives.map((creative) =>(
             
             <div className='creativeEach'>
-                <div>
+                <div className='eachDiv'>
                   <img src={creative.profilePic} alt="" />
                   <h2>{creative.name}</h2>
                   <p>@{creative.username}</p>
