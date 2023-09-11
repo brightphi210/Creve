@@ -44,39 +44,83 @@
 
 .creativePart{
     padding: 150px 10%;
+    background-color: var(--gre-color);
+    height: 100vh;
 }
+
+.myFormNew{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+}
+
+.myFormNew input{
+    width: 50%;
+    padding: 16px;
+    margin: 0; 
+}
+
+
+.myFormNew button{
+    width: 10%;
+    margin: 0;
+}
+
+.filterNew{
+    position: absolute;
+    right: 0;
+    padding: 15px 50px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.sort{
+    font-size: 15px;
+}
+
+.filterNew:hover{
+    background-color: #7272be;
+    color: white;
+    transition: all 0.2s ease;
+}
+
 
 .creativeProfileDiv{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 30px;
+    padding-top: 40px;
 }
 
 .creativeEach{
     background-color:white;
     padding: 30px 20px;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     border-radius: 10px;
     cursor: pointer;
+    color: black;
 }
 
 .creativeEach img{
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 80px;
     border-radius: 50%;
 }
 
-.eachDiv 
+/* .eachDiv  */
 
-.creativeEach h2{
-    font-size: 14px;
+.eachDiv h2{
+    font-size: 15px;
     font-weight: 500;
     padding-top: 20px;
 }
 
 .creativeEach p{
-    font-size: 13px;
+    font-size: 12px;
     color: grey;
-    padding-top: 10px;
+    padding-top: 5px;
 }

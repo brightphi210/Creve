@@ -37,26 +37,25 @@ const CreativePart = () => {
   return (
     <div>
         <section className='creativePart'>
-          {/* <div className='creativePartDiv'>
-            {creatives.map((creative)=>(
-              <div className='creativeProfileDiv'>
-                <img src={creative.profilePic} alt="" />
+          
+          <form action="" className='myFormNew'>
+            <input type="text"  placeholder='search something . . '/>
+            <button>Search</button>
+            <p className='filterNew'><i class="uil uil-sort-amount-up sort"></i> Filter</p>
+          </form>
+
+
+          <div className='creativeProfileDiv'>
+            {creatives.map((creative) =>(
+              
+              <div className='creativeEach'>
+                  <div className='eachDiv'>
+                    <img src={creative.profilePic} alt="" />
+                    <h2>{creative.name}</h2>
+                    <p>@{creative.username}</p>
+                  </div>
               </div>
             ))}
-          </div> */}
-          <div className='creativeProfileDiv'>
-            
-          {creatives.map((creative) =>(
-            
-            <div className='creativeEach'>
-                <div className='eachDiv'>
-                  <img src={creative.profilePic} alt="" />
-                  <h2>{creative.name}</h2>
-                  <p>@{creative.username}</p>
-                </div>
-            </div>
-
-          ))}
           </div>
         </section>
     </div>
