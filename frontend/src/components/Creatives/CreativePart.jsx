@@ -52,7 +52,7 @@ const CreativePart = () => {
                 <div>
                   <img src={creative.profilePic} alt="" />
                   <h2>{creative.name}</h2>
-                  <p>{creative.username}</p>
+                  <p>@{creative.username}</p>
                 </div>
             </div>
 
