@@ -52,7 +52,7 @@
 
 .workSectionDiv{
     display: grid;
-    grid-template-columns: 2fr 4fr 150px;
+    grid-template-columns: 3fr 3fr 150px;
     align-items: center;
     gap: 50px;
     margin: auto;
@@ -75,7 +75,7 @@
 .myForm button{
     padding: 10px;
     margin: 0;
-    width: 50%;
+    width: 20%;
     border-radius: 10px;
 }
 

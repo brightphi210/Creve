@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import './login.css'
+import './signup.css'
 
 import { Link, Navigate } from'react-router-dom'
 import mylogo from'./images/craves.png'
-import bgImage from'./images/login-img1.png'
+import bgImage from'./images/integrations.mp4'
 const Signup = () => {
 
     const [name, setName] = useState('')
@@ -50,16 +50,22 @@ const Signup = () => {
         <section className='loginDiv'>
             <div className='loginimageDiv'>
                 <div className='image'>
-                    <img src={bgImage} alt="" />
+                <video src={bgImage} alt=""  
+                        autoPlay 
+                        controls={false} 
+                        muted loop
+                        preload="auto"
+                        className='myVideo'
+                        />
                 </div>
-                <h3>Welcome to Creve Africa . . . .</h3>
+                {/* <h3>Welcome to Creve Africa . . . .</h3> */}
             </div>
 
-            <div className='formDiv'>
+            <div className='formDiv1'>
                 <img className='myLogo' src={mylogo} alt="" />
                 <div className='backHome'>
                 <h2>Register as Creatives</h2>
-                    <Link to={'/'} ><p><i class="uil uil-arrow-left"></i> Back to home</p></Link>
+                    <Link to={'/'} ><h4><i class="uil uil-arrow-left"></i> Back to home</h4></Link>
                 </div>
 
                 <form action="" onSubmit={submit}>

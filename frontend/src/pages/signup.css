@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;600&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --white-color:white;
+
+    --black-color:#070417;
+
+    --gre-color:#B3BAC3;
+
+
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}   
+
+
+.light{
+    --white-color:white;
+    --black-color:#070417;
+
+    --gre-color:#f6f6f6;
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.dark{
+    --black-color:white;
+    --white-color:#070417;
+
+    --gre-color:#100D1F;
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+/* ======================== Section Five ========================= */
+
+body{
+    background-color: var(--white-color);
+}
+
+.loginDivGen{
+
+}
+
+.loginDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.loginimageDiv{
+    
+}
+
+
+.loginimageDiv h3{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+    /* padding-top: 100px; */
+}
+
+
+.image{
+
+}
+
+
+.myVideo{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+@media only screen and (min-width:321px) and (max-width:768px){
+    .loginimageDiv{
+        display: none
+    }
+    .loginDiv{
+        grid-template-columns: 1fr;
+    }
+
+    .image img{
+        width: 80%;
+    }
+}
+
+.formDiv1{
+    text-align: left;
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 230px;
+    padding-bottom: 0;
+    background-color: white;
+    z-index: 3;
+}
+
+.myLogo{
+    width: 18%;
+    cursor: pointer;
+}
+
+.backHome{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.formDiv1 h2{
+    font-size: 30px;
+    padding-top: 20px;
+    color: #070417;
+    font-family: 'Kanit', sans-serif;
+}
+
+.formDiv1 h4{
+    font-size: 15px;
+    padding-top: 20px;
+    color: #070417;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+}
+
+
+
+label{
+    display: block;
+    font-size: 13px;
+    padding-top: 30px;
+    color: #070417;
+}
+
+
+form{
+
+}
+form input{
+    display: block;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 8px;
+    outline: none;
+}
+
+form input[type="email"]:focus {
+    border: 1px solid rgb(210, 210, 210);
+    /* box-shadow: rgb(173, 136, 211) 0 0 4px 0; */
+}
+
+form input[type="password"]:focus {
+    border: 1px solid rgb(210, 210, 210);
+    /* box-shadow: rgb(173, 136, 211) 0 0 4px; */
+}
+
+
+form button{
+    background: linear-gradient(to right, var(--black-color) 50%, #7272be 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+form button:hover {
+    background-position: left bottom;
+    color: var(--white-color);
+}
+
+form p{
+    font-size: 13px;
+    padding-top: 20px;
+    text-align: center;
+    color: #070417;
+}
+
+form span{
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #e5298a;
+}
+
+@media only screen and (min-width:321px) and (max-width:768px){
+
+    .formDiv1{
+        padding: 100px 8%;
+        padding-bottom: 0;
+    }
+
+    .backHome{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .backHome h2{
+        font-size: 15px;
+    }
+
+    label{
+        display: block;
+        font-size: 13px;
+        padding-top: 15px;
+    }
+}

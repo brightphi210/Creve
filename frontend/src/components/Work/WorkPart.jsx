@@ -1,14 +1,28 @@
 
 import React, { useState, useEffect } from 'react'
 import './workPart.css'
-
+import WorkModal from './workModal'
+import WorkFiltered from './WorkFiltered'
 
 const WorkPart = () => {
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const url = 'http://127.0.0.1:8000/api/products/'
+  const [searchQuery, setSearchQuery] = useState('');
+  const urla = `http://127.0.0.1:8000/api/products/?search=${searchQuery}`
   const [products, setProduct] = useState([])
 
   const fetchData =  async () =>{
+
     try{
       const response = await fetch(url,{
         method: 'GET',
@@ -27,30 +41,57 @@ const WorkPart = () => {
   }
 
 
+  const fetchData2 =  async (e) =>{
+    e.preventDefault()
+    try{
+      const response = await fetch(urla,{
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+
+      })
+      const data = await response.json();
+      setProduct(data)
+
+
+    }catch(e){
+      console.log("There was an error fetching the data!!")
+    }
+  }
+
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [searchQuery]);
+
+
+  
+  
   return (
     <div>
       <section className='workSection'> 
         <div className='workSectionDiv'>
-          <form action="" className='myForm'>
-            <input type="text" placeholder='Search here . . ' />
-            <button>Seach</button>
+          <form action="" className='myForm' onSubmit={fetchData2}>
+            <input 
+            type="text" 
+            placeholder='Search here . . ' 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button type='submit'>Search</button>
           </form>
 
           <ul>
             <li>Discover</li>
-            <li>Web</li>
+            <li>Web/App</li>
             <li>Furnitures</li>
             <li>Fashions</li>
             <li>Cobbling</li>
-            <li>Digital Art</li>
-            <li>UI Designer</li>
+            <li>UI/UX</li>
           </ul>
 
           <div className='workBtn'>
-            <button><i class="uil uil-sort-amount-down"></i> Filters</button>
+            <button onClick={openModal}><i class="uil uil-sort-amount-down"></i> Filters</button>
           </div>
         </div>
 
@@ -74,6 +115,7 @@ const WorkPart = () => {
           ))}
         </div>
       </section>
+      <WorkModal isOpen={isModalOpen} closeModal={closeModal} />
     </div>
   )
 }

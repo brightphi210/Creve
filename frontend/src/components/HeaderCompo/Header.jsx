@@ -53,8 +53,8 @@ const Header = () => {
             <ul className={`nav-ul ${isNavOpen ? "open" :"close"} `}>
                 
                 <Link to={'/'}><li>Home</li></Link>
-                <Link to={'/'+'creatives'}><li>Find Talents</li></Link>
                 <Link to={'/'+'works'}><li>Services</li></Link>
+                <Link to={'/'+'creatives'}><li>Find Talents</li></Link>
 
 
                 <li className='dropdown'>Community <i class="uil uil-angle-down down"></i>
