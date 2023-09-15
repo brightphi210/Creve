@@ -53,19 +53,35 @@
     align-items: center;
     width: 100%;
     gap: 20px;
-    position: relative;
 }
 
-.myFormNew input{
-    width: 50%;
-    padding: 16px;
+.creativeSearchDiv{
+    position: relative;
+    width: 40%;
+}
+
+.creaIcon{
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    padding-right: 10px;
+    border-right: rgb(209, 209, 209) solid 1px;
+    font-size: 20px;
+}
+
+.creativeSearchDiv input{
+    width: 100%;
+    padding: 15px;
+    padding-left: 60px;
     margin: 0; 
+    font-size: 15px;
 }
 
 
 .myFormNew button{
     width: 10%;
     margin: 0;
+    padding: 15px;
 }
 
 .filterNew{

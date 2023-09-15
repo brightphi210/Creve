@@ -1,19 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import './creativePart.css'
-import CreativeModal from './CreativeModal'
+
 
 const CreativePart = () => {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
 
   const [creatives, setCreatives] = useState([])
@@ -73,14 +64,16 @@ const CreativePart = () => {
         <section className='creativePart'>
           
           <form className='myFormNew' onSubmit={fetchData2}>
-            <input 
-              type="text"  
-              placeholder='search something . . '
-              value={creativeText}
-              onChange={(e) => setCreativeText(e.target.value)}
-            />
+            <div className='creativeSearchDiv'>
+              <i class="uil uil-search creaIcon"></i>
+              <input 
+                type="text"  
+                placeholder='search something . . '
+                value={creativeText}
+                onChange={(e) => setCreativeText(e.target.value)}
+              />
+            </div>
             <button type="submit">Search</button>
-            <p className='filterNew' onClick={openModal}><i class="uil uil-sort-amount-up sort"></i> Filter</p>
           </form>
 
 

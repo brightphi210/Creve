@@ -58,7 +58,7 @@ class GetCreativeProfileView(generics.ListAPIView):
     queryset = CreativeAccount.objects.all()
     serializer_class = CreativeProfileSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['account__name', 'account__email']
+    search_fields = ['account__name', 'account__email', 'account__username']
 
 
 # ================== GET UPDATE AND DELETE CREATIVE PROFILE  ====================
@@ -94,7 +94,7 @@ class ProductGet(generics.ListAPIView):
     serializer_class = ProductSerializer
 
     filter_backends = [filters.SearchFilter]
-    search_fields = ['webAndMobile__categoryName', 'name']
+    search_fields = ['webAndMobile__categoryName', 'name', 'creator__name']
 
 
 class ProductUser(generics.ListAPIView):

@@ -72,12 +72,15 @@ const WorkPart = () => {
       <section className='workSection'> 
         <div className='workSectionDiv'>
           <form action="" className='myForm' onSubmit={fetchData2}>
-            <input 
-            type="text" 
-            placeholder='Search here . . ' 
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            />
+            <div className='workSearchDiv'>
+              <i class="uil uil-search creaIcon"></i>
+              <input 
+                type="text" 
+                placeholder='Search here . . ' 
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
             <button type='submit'>Search</button>
           </form>
 

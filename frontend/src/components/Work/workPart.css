@@ -64,19 +64,25 @@
     gap: 10px;
 }
 
-.myForm input{
-    padding: 12px;
-    margin: 0;
+
+.workSearchDiv{
+    position: relative;
     width: 100%;
-    border-radius: 10px;
+}
+
+.workSearchDiv input{
+    width: 100%;
+    padding: 15px;
+    padding-left: 60px;
+    margin: 0; 
+    font-size: 15px;
 }
 
 
 .myForm button{
-    padding: 10px;
-    margin: 0;
     width: 20%;
-    border-radius: 10px;
+    margin: 0;
+    padding: 15px;
 }
 
 .workSectionDiv ul{
