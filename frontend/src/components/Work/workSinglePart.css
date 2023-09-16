@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --white-color:white;
+
+    --black-color:#070417;
+
+    --gre-color:#B3BAC3;
+
+
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}   
+
+
+.light{
+    --white-color:white;
+    --black-color:#070417;
+
+    --gre-color:#f6f6f6;
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.dark{
+    --black-color:white;
+    --white-color:#070417;
+
+    --gre-color:#100D1F;
+    --light-blue:#7EBEE0;
+
+    --shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.creativeClose{
+    right: 90px;
+    top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+}
+
+
+.productSingleGenDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.productSingleDiv{
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 30px 20%;
+    border-radius:10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    overflow: scroll;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.productSingleDivFlex{
+    display: flex;
+    align-items: center;
+    padding: 30px 10%;
+    gap: 30px;
+    position: relative;
+}
+
+.productSingleDivFlex h2{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.productSingleDivFlex p{
+    font-size: 13px;
+    color: rgb(149, 149, 149);
+}
+
+
+.proBtn{
+    position: absolute;
+    right: 100px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #070417;
+    color: white;
+}
+
+
+.productSingleDivFlex img{
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+.proDescDiv{
+    padding: 30px 5%;
+}
+
+
+.productSingleDiv h3{
+    font-weight: 300;
+    line-height: 40px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.emailP{
+    font-size: 15px;
+}
+
+.emailP span{
+    font-weight: 500;
+}
+
+.mainImage img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.proSideBar{
+    position: fixed;
+    top: 170px;
+    right: 80px;
+    text-align: center;
+}
+
+.proSideBar img{
+    width: 40px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.proSideBar i{
+    font-size: 16px;
+    display: block;
+    border-radius: 50%;
+    border: rgb(222, 222, 222) solid 1px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.proSideBar i:hover{
+    border: rgb(248, 166, 166) solid 1px;
+    transition: all 0.5s linear;
+}

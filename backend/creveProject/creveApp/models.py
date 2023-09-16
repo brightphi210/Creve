@@ -140,6 +140,7 @@ class Product(models.Model):
     price = models.IntegerField(blank=True, null=True)
     description = models.TextField(max_length=255, blank=True, null=True)
     image = models.ImageField(upload_to='products/', blank=True, null=True)
+    image2 = models.ImageField(upload_to='products/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

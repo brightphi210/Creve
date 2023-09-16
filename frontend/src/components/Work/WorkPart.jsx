@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect } from 'react'
 import './workPart.css'
-import WorkModal from './workModal'
-import WorkFiltered from './WorkFiltered'
+import { Link } from 'react-router-dom';
 
 const WorkPart = () => {
 
@@ -102,7 +101,8 @@ const WorkPart = () => {
         <div className='workProductDiv'>
           { products.map((product) => (
             
-            <div className='workDiv'>
+            <Link to={'/' + `works/${product.id}`}>
+              <div className='workDiv'>
               <img src={product.image} alt="" />
               <h3 className='productOverlay'>{product.name}</h3>
               <div className='profileDiv'>
@@ -114,11 +114,12 @@ const WorkPart = () => {
                 <span><i class="uil uil-heart"></i> 30</span>
               </div>
             </div>
+            </Link>
 
           ))}
         </div>
       </section>
-      <WorkModal isOpen={isModalOpen} closeModal={closeModal} />
+      {/* <WorkModal isOpen={isModalOpen} closeModal={closeModal} /> */}
     </div>
   )
 }

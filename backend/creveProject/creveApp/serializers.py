@@ -130,6 +130,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'price',
             'description',
             'image',
+            'image2',
 
 
             'webAndMobile',

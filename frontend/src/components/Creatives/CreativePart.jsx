@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import './creativePart.css'
 
+import {Link}  from 'react-router-dom'
+import './creativePart.css'
+import CreativeSinglePart from './CreativeSinglePart'
 
 const CreativePart = () => {
-
 
 
   const [creatives, setCreatives] = useState([])
@@ -80,26 +81,18 @@ const CreativePart = () => {
           <div className='creativeProfileDiv'>
             {creatives.map((creative) =>(
               
-              <div className='creativeEach'>
-                {noResults ? (
-                    <div>
-                    <h1>No creatives found</h1>
-                  </div>
-                  ):(
-
-                    <div className='eachDiv'>
-                      <img src={creative.profilePic} alt="" />
-                      <h2>{creative.name}</h2>
-                      <p>@{creative.username}</p>
-                    </div> 
-                  )
-                }
+              <Link key={creative.id} to={'/' + `creatives/${creative.id}`}>
+                <div className='creativeEach'>
+                <div className='eachDiv'>
+                  <img src={creative.profilePic} alt="" />
+                  <h2>{creative.name}</h2>
+                  <p >@{creative.username}</p>
+                </div> 
               </div>
+              </Link>
             ))}
           </div>
         </section>
-        {/* <CreativeModal  isOpen={isModalOpen} closeModal={closeModal}/> */}
-        {/* <ProductSearchModal isOpen={isModalOpen} onClose={closeModal} /> */}
     </div>
   )
 }
