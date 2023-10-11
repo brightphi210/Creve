@@ -18,6 +18,7 @@ const DashHomePart = () => {
 
 
   const location = useLocation();
+  
   const state = location.state || {};
   const successMessage = state.successMessage;
   // const successMessage1 = state.successMessage;
