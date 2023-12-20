@@ -1,6 +1,9 @@
 
 import React from 'react'
 
+// import { jwtDocode } from 'jwt-decode' 
+
+import jwt_decode  from 'jwt-decode'
 import './CSS/dashHomePart.css'
 import { useEffect, useState, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -8,13 +11,12 @@ import { useLocation } from 'react-router-dom';
 import emptyImage from './images/empty.jpg'
 
 
-
 import AuthContext from '../../utils/AuthContext';
 
 
-const DashHomePart = () => {
+const DashHomePart = ({ onSubmit }) => {
 
-  let {authTokens} = useContext(AuthContext)
+  
 
 
   const location = useLocation();
@@ -62,6 +64,48 @@ const DashHomePart = () => {
 
     fetchCreativeProduct();
   }, []);
+
+
+
+
+  const [file, setFile] = useState(null);
+
+  const storedToken = localStorage.getItem('authToken');
+  let {authTokens} = useContext(AuthContext)
+
+  const [isLoading, setIsLoading] = useState(false)
+  
+  console.log(authTokens.access);
+  const decodedtoken = jwt_decode(storedToken)
+  console.log('THis is ur token', decodedtoken.user_id)
+
+  const userId = decodedtoken.user_id
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+
+  const handleUpdate = () => {
+    const formData = new FormData();
+    formData.append('profile_pic', file);
+
+    fetch('https://gen-zsquare.com/api/userprofile/update/46', {
+      method: 'PATCH',
+      headers: {
+        Authorization: `Bearer ${authTokens.access}`, // Include your authentication token
+      },
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Profile picture updated successfully:', data);
+        // Handle any additional logic or UI updates
+      })
+      .catch(error => {
+        console.error('Error updating profile picture:', error);
+        // Handle errors and update UI accordingly
+      });
+  };
   return (
     <div>
       <section className='dashHomePart'>
@@ -100,7 +144,12 @@ const DashHomePart = () => {
               
             </div>
 
-            <div className='workDes'>
+
+            <div>
+              <input type="file" onChange={handleFileChange} />
+              <button onClick={handleUpdate}>{isLoading ? 'Loading . . ' : 'Submit'}</button>
+            </div>
+            {/* <div className='workDes'>
               <p><i class="uil uil-clipboard-notes"></i> List of works</p>
             </div>
             { creativeProducts.length > 0 ? (
@@ -118,12 +167,14 @@ const DashHomePart = () => {
                 <p className='emptyMessage'>No creative products available.</p>
               </div>
             )
-            }
+            } */}
 
             
           </div>
 
-            <div className='dashRecent'>
+
+
+            {/* <div className='dashRecent'>
               <h3>Recent Activity</h3>
 
               <div className='message'>
@@ -145,7 +196,7 @@ const DashHomePart = () => {
               </div>
 
               <button >See More</button>
-            </div>
+            </div> */}
         </div>
       </section>
     </div>

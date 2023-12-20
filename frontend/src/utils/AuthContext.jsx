@@ -18,8 +18,8 @@ export const AuthProvider = ({ children }) => {
 
     let [loading, setLoading] = useState(true)
 
-    const url = "http://127.0.0.1:8000/auth/login/"
-    const url2 = "http://127.0.0.1:8000/auth/refresh/"
+    const url = "https://gen-zsquare.com/api/token/"
+    const url2 = "https://gen-zsquare.com/api/token/refresh/"
 
 
     const loginUser = async (e) => {
